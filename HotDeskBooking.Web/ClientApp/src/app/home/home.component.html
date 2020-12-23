@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="welcome">
+    <p class="title">Welcome to HotDeskBooking app!</p>
+    <img src="https://static.thenounproject.com/png/2896766-200.png" alt="hot-desk">
+    <p>Here you can book desk that you want work at for a specified time.</p>
+  </div>
+  <div class="login">
+    <p>Login</p>
+    <form [formGroup]="form">
+
+      <mat-form-field>
+        <mat-label>Login</mat-label>
+        <input matInput type="text" formControlName="login">
+        <mat-icon matSuffix>account_circle</mat-icon>
+        <mat-error *ngIf="form.invalid">{{getError("login")}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+        <mat-icon matSuffix>vpn_key</mat-icon>
+        <mat-error *ngIf="form.invalid">{{getError("password")}}</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" [disabled]="form.invalid" [routerLink]="'main'">Login</button>
+
+    </form>
+  </div>
+</div>
