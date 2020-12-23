@@ -1,4 +1,4 @@
-#container {
+.container {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -7,7 +7,7 @@
   height: 70rem;
   border-radius: 1.5rem;
 
-  #welcome {
+  .welcome {
     width: 60%;
     border-right: 1px solid #000;
     text-align: center;
@@ -17,7 +17,7 @@
     background-color: #f9f9f9;
     border-radius: 1.5rem 0 0 1.5rem;
 
-    #title {
+    .title {
       font-size: 4em;
       line-height: 6rem;
       letter-spacing: 0.2rem;
@@ -37,7 +37,7 @@
     }
   }
 
-  #login {
+  .login {
     display: flex;
     flex-direction: column;
     justify-content: center;
