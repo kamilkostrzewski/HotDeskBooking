@@ -15,9 +15,6 @@ export class HomeComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
   getError(errorType: string): string {
     switch (errorType) {
       case 'login':

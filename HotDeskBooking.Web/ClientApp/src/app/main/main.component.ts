@@ -9,7 +9,4 @@ export class MainComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
 }
