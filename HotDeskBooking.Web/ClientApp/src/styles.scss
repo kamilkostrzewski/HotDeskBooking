@@ -8,8 +8,9 @@ html {
 body {
   height: 100%;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
-  background-color: #673ab7;
+  font-family: "Montserrat", sans-serif !important;
+  background: url('./assets/images/office_background.webp') blueviolet center no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
