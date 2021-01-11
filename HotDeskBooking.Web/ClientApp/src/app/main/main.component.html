@@ -1,3 +1,14 @@
-<div>
-  Hello!
-</div>
+<mat-toolbar>
+  <mat-toolbar-row class="title">
+    HotDeskBooking
+  </mat-toolbar-row>
+  <mat-toolbar-row class="navbar">
+    <div>
+      <span><button mat-raised-button routerLink="booking">Booking</button></span>
+      <span><button mat-raised-button routerLink="booked">Booked</button></span>
+      <span><button mat-raised-button routerLink="history">History</button></span>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
