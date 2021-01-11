@@ -1,0 +1,29 @@
+mat-toolbar {
+  background-color: #FFFFFF95;
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  justify-content: center;
+  font-size: 2em;
+  margin-top: 1rem;
+}
+
+.navbar {
+  justify-content: center;
+  padding: 4rem 0;
+
+  div {
+
+
+    span {
+      padding-right: 3rem;
+      padding-left: 3rem;
+
+      button {
+        font-size: 1.5rem;
+        padding: 0.6 rem 4rem;
+      }
+    }
+  }
+}
