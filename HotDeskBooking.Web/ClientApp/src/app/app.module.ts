@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
 import { BookingComponent } from './main/booking/booking.component';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { BookedComponent } from './main/booked/booked.component';
 import { HistoryComponent } from './main/history/history.component';
 
@@ -19,7 +19,7 @@ import { HistoryComponent } from './main/history/history.component';
     HomeComponent,
     MainComponent,
     BookingComponent,
-    NotfoundComponent,
+    NotFoundComponent,
     BookedComponent,
     HistoryComponent
   ],

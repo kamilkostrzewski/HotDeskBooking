@@ -5,7 +5,7 @@ import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,7 +31,7 @@ const routes: Routes = [
       },
     ],
   },
-  { path: '**', component: NotfoundComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
