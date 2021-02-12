@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif !important;
+  background: url("./assets/images/office_background.webp") blueviolet center no-repeat;
+  background-size: cover;
+}
