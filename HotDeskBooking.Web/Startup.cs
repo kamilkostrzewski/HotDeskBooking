@@ -1,4 +1,8 @@
+using System;
 using HotDeskBooking.Persistence;
+using HotDeskBooking.Persistence.Repositories.Abstract;
+using HotDeskBooking.Persistence.Repositories.Base;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +34,9 @@ namespace HotDeskBooking.Web
             });
             services.AddDbContext<DatabaseContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DeskBookingDatabase")));
+            var assembly = AppDomain.CurrentDomain.Load("HotDeskBooking.Application");
+            services.AddMediatR(assembly);
+            services.AddScoped(typeof(IAuthRepository), typeof(AuthRepository));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

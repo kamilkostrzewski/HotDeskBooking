@@ -1,4 +1,4 @@
-﻿using HotDeskBooking.Domain;
+﻿using HotDeskBooking.Domain.Auth;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotDeskBooking.Persistence
@@ -7,7 +7,7 @@ namespace HotDeskBooking.Persistence
     {
         public DbSet<User> Users { get; set; }
 
-        public DatabaseContext(DbContextOptions options) : base(options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
         }
 

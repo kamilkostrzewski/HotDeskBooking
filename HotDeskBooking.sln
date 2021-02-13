@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotDeskBooking.Web", "HotDeskBooking.Web\HotDeskBooking.Web.csproj", "{674D9767-5D64-491F-8A16-BE36C638F536}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDeskBooking.Persistence", "HotDeskBooking.Persistence\HotDeskBooking.Persistence.csproj", "{177B5E6A-2FD5-475F-A507-4F3528C1F375}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotDeskBooking.Persistence", "HotDeskBooking.Persistence\HotDeskBooking.Persistence.csproj", "{177B5E6A-2FD5-475F-A507-4F3528C1F375}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDeskBooking.Domain", "HotDeskBooking.Domain\HotDeskBooking.Domain.csproj", "{EDEBB90A-53AB-4839-97FC-B412347BF2CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotDeskBooking.Domain", "HotDeskBooking.Domain\HotDeskBooking.Domain.csproj", "{EDEBB90A-53AB-4839-97FC-B412347BF2CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDeskBooking.Application", "HotDeskBooking.Application\HotDeskBooking.Application.csproj", "{FCC0F7AB-089D-4D11-A2DF-232ED08F319B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EDEBB90A-53AB-4839-97FC-B412347BF2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDEBB90A-53AB-4839-97FC-B412347BF2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDEBB90A-53AB-4839-97FC-B412347BF2CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCC0F7AB-089D-4D11-A2DF-232ED08F319B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC0F7AB-089D-4D11-A2DF-232ED08F319B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC0F7AB-089D-4D11-A2DF-232ED08F319B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC0F7AB-089D-4D11-A2DF-232ED08F319B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
