@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using HotDeskBooking.Domain.Auth;
+﻿using HotDeskBooking.Domain.Auth;
 using HotDeskBooking.Persistence.Repositories.Abstract;
 
 namespace HotDeskBooking.Persistence.Repositories.Base
