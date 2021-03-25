@@ -1,1 +1,60 @@
-<p>booking works!</p>
+<div class="wrapper">
+  <h2>Reserve your desk</h2>
+  <div class="line"></div>
+  <mat-horizontal-stepper linear #stepper>
+    <mat-step [stepControl]="formDateGroup">
+      <form [formGroup]="formDateGroup">
+        <ng-template matStepLabel>Choose date</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Pick date</mat-label>
+          <input
+            matInput
+            [matDatepicker]="date"
+            [matDatepickerFilter]="dateFilter"
+            [min]="minDate"
+            [max]="maxDate"
+            formControlName="date"
+            readonly
+            required
+          />
+          <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+          <mat-datepicker #date></mat-datepicker>
+        </mat-form-field>
+      </form>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step [stepControl]="formOfficeGroup">
+      <ng-template matStepLabel>Choose office</ng-template>
+      <form [formGroup]="formOfficeGroup">
+        <mat-form-field>
+          <mat-label>Pick office</mat-label>
+          <mat-select required formControlName="office">
+            <mat-option value="office1">Office 1</mat-option>
+            <mat-option value="office2">Office 2</mat-option>
+            <mat-option value="office3">Office 3</mat-option>
+            <mat-option value="office4">Office 4</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step [stepControl]="formDeskGroup">
+      <ng-template matStepLabel>Choose desk</ng-template>
+      <form [formGroup]="formDeskGroup">
+        <mat-form-field>
+          <mat-label>Pick desk</mat-label>
+          <mat-select required formControlName="desk">
+            <mat-option value="desk1">Desk 1</mat-option>
+            <mat-option value="desk2">Desk 2</mat-option>
+            <mat-option value="desk3">Desk 3</mat-option>
+            <mat-option value="desk4">Desk 4</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step [stepControl]="formDeskGroup">
+      <ng-template matStepLabel>Done</ng-template>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

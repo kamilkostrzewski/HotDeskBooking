@@ -1,14 +1,30 @@
 <mat-toolbar>
   <mat-toolbar-row class="title">
+    <button mat-stroked-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
     HotDeskBooking
-  </mat-toolbar-row>
-  <mat-toolbar-row class="navbar">
-    <div>
-      <span><button mat-raised-button routerLink="booking">Booking</button></span>
-      <span><button mat-raised-button routerLink="booked">Booked</button></span>
-      <span><button mat-raised-button routerLink="history">History</button></span>
-    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #drawer mode="side" opened>
+    <mat-list>
+      <mat-list-item routerLink="booking">
+        <mat-icon mat-list-icon>book_online</mat-icon>
+        <span> Booking </span>
+      </mat-list-item>
+      <mat-list-item routerLink="booked">
+        <mat-icon mat-list-icon>assignment_turned_in</mat-icon>
+        <span> Booked </span>
+      </mat-list-item>
+      <mat-list-item routerLink="history">
+        <mat-icon mat-list-icon>history</mat-icon>
+        <span> History </span>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

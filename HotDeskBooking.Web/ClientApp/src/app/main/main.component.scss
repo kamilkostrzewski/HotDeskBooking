@@ -1,29 +1,49 @@
-mat-toolbar {
-  background-color: #FFFFFF95;
-  backdrop-filter: blur(10px);
-}
+mat-sidenav-container {
+  position: absolute;
+  top: 6.4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: opacity($color: #ffffff00);
 
-.title {
-  justify-content: center;
-  font-size: 2em;
-  margin-top: 1rem;
-}
+  mat-sidenav-content {
+    padding: 1rem;
+  }
 
-.navbar {
-  justify-content: center;
-  padding: 4rem 0;
+  mat-sidenav {
+    width: 20rem;
+    background-color: #ffffff95;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  div {
-
-
-    span {
-      padding-right: 3rem;
-      padding-left: 3rem;
-
-      button {
-        font-size: 1.5rem;
-        padding: 0.6 rem 4rem;
+    mat-list {
+      mat-list-item {
+        border-bottom: 0.1rem solid black;
+        mat-icon {
+          margin-right: 1rem;
+        }
       }
+      mat-list-item:hover {
+        cursor: pointer;
+        background-color: #eeeeee;
+      }
+      mat-list-item:active {
+        cursor: pointer;
+        background-color: #dddddd;
+      }
+    }
+  }
+}
+
+mat-toolbar {
+  background-color: #ffffff95;
+  backdrop-filter: blur(10px);
+
+  .title {
+    button {
+      margin-right: 1rem;
     }
   }
 }
