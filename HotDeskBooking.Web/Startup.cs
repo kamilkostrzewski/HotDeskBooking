@@ -11,6 +11,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using HotDeskBooking.Application.Managers;
 
 namespace HotDeskBooking.Web
 {
@@ -37,6 +41,23 @@ namespace HotDeskBooking.Web
             var assembly = AppDomain.CurrentDomain.Load("HotDeskBooking.Application");
             services.AddMediatR(assembly);
             services.AddScoped(typeof(IAuthRepository), typeof(AuthRepository));
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(jwtBearerOptions =>
+            {
+                jwtBearerOptions.RequireHttpsMetadata = false;
+                jwtBearerOptions.SaveToken = true;
+                jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(TokenManager._secret)),
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.FromMinutes(1)
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
