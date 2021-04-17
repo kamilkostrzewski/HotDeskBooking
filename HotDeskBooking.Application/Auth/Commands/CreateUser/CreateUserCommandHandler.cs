@@ -17,7 +17,7 @@ namespace HotDeskBooking.Application.Auth.Commands.CreateUser
 
         public Task<Unit> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var user = User.Create(request.Login, request.Password);
+            var user = User.Create(request.Login, request.Password, request.FirstName, request.LastName);
             _authRepository.Add(user);
 
             return Unit.Task;

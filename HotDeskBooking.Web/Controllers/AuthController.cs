@@ -18,7 +18,7 @@ namespace HotDeskBooking.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateUserModel createUserModel)
         {
-            await _mediator.Send(new CreateUserCommand(createUserModel.Login, createUserModel.Password));
+            await _mediator.Send(new CreateUserCommand(createUserModel.Login, createUserModel.Password, createUserModel.FirstName, createUserModel.LastName));
 
             return Ok();
         }

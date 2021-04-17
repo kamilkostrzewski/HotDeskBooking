@@ -19,6 +19,7 @@ namespace HotDeskBooking.Application.Managers
                 .WithSecret(Encoding.ASCII.GetBytes(_secret))
                 .AddClaim("exp", DateTimeOffset.UtcNow.AddMinutes(10).ToUnixTimeSeconds())
                 .AddClaim("username", user.Login)
+                .Audience("access")
                 .Encode();
         }
 
@@ -39,6 +40,7 @@ namespace HotDeskBooking.Application.Managers
                 .AddClaim("exp", DateTimeOffset.UtcNow.AddHours(4).ToUnixTimeSeconds())
                 .AddClaim("refresh", randomString)
                 .AddClaim("username", user.Login)
+                .Audience("refresh")
                 .Encode();
 
             return (randomString, jwt);
